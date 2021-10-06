@@ -5,7 +5,7 @@ from vk_api.utils import get_random_id
 import schedule 
 import time
 
-vk_session = vk_api.VkApi(token='3e0d60982cd52ce4790a744e3386709cbeff9ff8e821e0a9125b867122fa2e2891a9f9aae50e746678775')
+vk_session = vk_api.VkApi(token='3e0d60982cd52ce4790a744e3386709cbeff9ff8e821e0a9125b867122fa2e2891a9f9aae50e74667877')
 
 url = 'https://rp5.ru/Погода_в_Абакане'
 response = requests.get(url)
