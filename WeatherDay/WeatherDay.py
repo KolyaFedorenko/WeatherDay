@@ -5,7 +5,7 @@ from vk_api.utils import get_random_id
 import schedule 
 import time
 
-vk_session = vk_api.VkApi(token='3e0d60982cd52ce4790a744e3386709cbeff9ff8e821e0a9125b867122fa2e2891a9f9aae50e74667877')
+vk_session = vk_api.VkApi(token='')
 
 url = 'https://rp5.ru/Погода_в_Абакане'
 response = requests.get(url)
@@ -20,7 +20,7 @@ longpoll = VkLongPoll(vk_session)
 vk = vk_session.get_api()
 
 def weather_message():
-    vk.messages.send(user_id=352352167, message=str(forecast.text), random_id=get_random_id())
+    vk.messages.send(user_id=event.user_id, message=str(forecast.text), random_id=get_random_id())
 
 for event in longpoll.listen():
 
